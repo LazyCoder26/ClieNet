@@ -30,7 +30,7 @@ const WorkComp = (props) => {
             <div className="pills">
               <div className="emoji">
                 <p>{emoji}</p>
-                <p className="emp-size">&nbsp;{empSize}&nbsp; </p>
+                <p className="emp-size">&nbsp;{empSize}</p>
               </div>
               <div className="flag">{flag}</div>
               {tags.map((tag, index) => (

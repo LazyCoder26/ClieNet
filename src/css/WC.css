@@ -85,7 +85,7 @@
 .emoji {
   display: flex;
   flex-direction: row;
-  min-width: 85px;
+  min-width: 95px;
 }
 
 .emoji {
@@ -98,6 +98,7 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  min-width: 40px;
 }
 
 .view-link {
@@ -162,4 +163,9 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+
+.proj > :nth-child(even) .work-1 {
+  display: flex;
+  flex-direction: row-reverse;
 }
