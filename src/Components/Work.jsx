@@ -24,7 +24,7 @@ const projects = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     projectLink: "#",
     emoji: "👨‍💻",
-    tags: ["React", "Node", "MongoDB"],
+    tags: ["DeFi","Web3","UI/UX"],
     empSize: "10-50",
     flag: "🇮🇳",
   },
@@ -60,21 +60,35 @@ const Work = () => {
   useEffect(() => {
     const customCursor = cursorRef.current;
 
-    const showCursor = () => {
-      gsap.to(customCursor, { duration: 0.2, opacity: 1, scale: 1 });
-      document.body.style.cursor = "none";
+    const showCursor = (e) => {
+      const customCursor = cursorRef.current;
+      const image = e.target.closest(".w1-img");
+    
+      if (image) {
+        gsap.to(customCursor, { duration: 0.2, opacity: 1, scale: 1 });
+        document.body.style.cursor = "none";
+      }
     };
-
-    const hideCursor = () => {
-      gsap.to(customCursor, { duration: 0.2, opacity: 0, scale: 0 });
-      gsap.to(customCursor, {
-        duration: 0.1,
-        scale: 0,
-        ease: "expo.in",
-        onComplete: () => {
+    
+    const hideCursor = (e) => {
+      const customCursor = cursorRef.current;
+      const image = e.target.closest(".w1-img");
+    
+      if (image) {
+        // Check if the mouse is still over the image
+        const isStillOverImage = e.clientX >= image.offsetLeft && e.clientX <= image.offsetLeft + image.offsetWidth && e.clientY >= image.offsetTop && e.clientY <= image.offsetTop + image.offsetHeight;
+    
+        if (!isStillOverImage) {
+          gsap.to(customCursor, { duration: 0.2, opacity: 0, scale: 0 });
+          gsap.to(customCursor, {
+            duration: 0.1,
+            scale: 0,
+            ease: "expo.in",
+            onComplete: document
+          });
           document.body.style.cursor = "auto";
-        },
-      });
+        }
+      }
     };
 
     const updateCursor = (e) => {
@@ -86,9 +100,9 @@ const Work = () => {
       });
     };
 
-    const projElements = document.querySelectorAll(".proj > div");
+    const imageElements = document.querySelectorAll(".w1-img");
 
-    projElements.forEach((element) => {
+    imageElements.forEach((element) => {
       element.addEventListener("mouseenter", showCursor);
       element.addEventListener("mouseleave", hideCursor);
     });
@@ -96,7 +110,7 @@ const Work = () => {
     document.addEventListener("mousemove", updateCursor);
 
     return () => {
-      projElements.forEach((element) => {
+      imageElements.forEach((element) => {
         element.removeEventListener("mouseenter", showCursor);
         element.removeEventListener("mouseleave", hideCursor);
       });
