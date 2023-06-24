@@ -1,0 +1,169 @@
+.Story-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.Story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0rem;
+  width: 100%;
+  height: fit-content;
+}
+
+.🗿 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.second {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.intro {
+  font-family: Inter;
+  font-size: 4.5rem;
+  width: 70%;
+}
+
+.detail {
+  font-family: Inter;
+  font-size: 1.3rem;
+  padding-top: 2.5rem;
+  width: 60%;
+  height: fit-content;
+}
+
+.person {
+  position: relative;
+}
+
+.person::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 5px;
+  top: -18px;
+  left: 0;
+  background-size: cover;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+}
+
+.person-1::after {
+  bottom: -25px;
+  top: auto;
+  background-image: url("https://images.pexels.com/photos/15894508/pexels-photo-15894508/free-photo-of-clouds-above-mountains.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"); /* Replace with person 1's image URL */
+  animation: moveImage1 4.5s infinite linear;
+}
+
+.person-2::after {
+  top: -35px;
+  bottom: auto;
+  right: 0;
+  left: auto;
+  background-image: url("https://images.pexels.com/photos/17300137/pexels-photo-17300137/free-photo-of-monte-fitz-roy-el-chalten-santa-cruz-argentina.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"); /* Replace with person 2's image URL */
+  animation: moveImage2 3.5s infinite alternate;
+}
+
+.person-3::after {
+  bottom: -30px;
+  top: auto;
+  left: auto;
+  right: 0;
+  background-image: url("https://images.pexels.com/photos/17214801/pexels-photo-17214801/free-photo-of-sea-landscape-sunset-beach.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"); /* Replace with person 3's image URL */
+  animation: moveImage3 5s infinite alternate-reverse;
+}
+
+.person-4::after {
+  top: auto;
+  bottom: -30px;
+  left: 0;
+  right: auto;
+  background-image: url("https://images.pexels.com/photos/15780002/pexels-photo-15780002/free-photo-of-speed-limit-sign.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"); /* Replace with person 4's image URL */
+  animation: moveImage4 4s infinite backwards;
+}
+
+.person-5::after {
+  bottom: -30px;
+  top: auto;
+  left: 0;
+  right: auto;
+  background-image: url("https://images.pexels.com/photos/14767637/pexels-photo-14767637.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"); /* Replace with person 5's image URL */
+  animation: moveImage5 5.6s infinite forwards;
+}
+
+@keyframes moveImage1 {
+  0% {
+    transform: translateX(-1.27576px) translateY(-4px) translateZ(0px);
+  }
+  50% {
+    transform: translateX(2px) translateY(4px) translateZ(0px);
+  }
+  100% {
+    transform: translateX(-1.27576px) translateY(-3.4px) translateZ(0px);
+  }
+}
+
+@keyframes moveImage2 {
+  0% {
+    transform: translateX(3px) translateY(-2px) translateZ(0px);
+  }
+  50% {
+    transform: translateX(-4px) translateY(5px) translateZ(0px);
+  }
+  100% {
+    transform: translateX(3px) translateY(-2px) translateZ(0px);
+  }
+}
+
+@keyframes moveImage3 {
+  0% {
+    transform: translateX(-2px) translateY(3px) translateZ(0px);
+  }
+  50% {
+    transform: translateX(4px) translateY(-5px) translateZ(0px);
+  }
+  100% {
+    transform: translateX(-2px) translateY(3px) translateZ(0px);
+  }
+}
+
+@keyframes moveImage4 {
+  0% {
+    transform: translateX(5px) translateY(-1px) translateZ(0px);
+  }
+  50% {
+    transform: translateX(-3px) translateY(2px) translateZ(0px);
+  }
+  100% {
+    transform: translateX(5px) translateY(-1px) translateZ(0px);
+  }
+}
+
+@keyframes moveImage5 {
+  0% {
+    transform: translateX(-4px) translateY(5px) translateZ(0px);
+  }
+  50% {
+    transform: translateX(2px) translateY(-3px) translateZ(0px);
+  }
+  100% {
+    transform: translateX(-4px) translateY(5px) translateZ(0px);
+  }
+}

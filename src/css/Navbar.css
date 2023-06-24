@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo img {
+  height: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0rem;
+  width: 100%;
+}
+
+.😉 {
+  display: flex;
+  align-items: center;
+  gap: 6.5rem;
+}
+
+.😉 .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.nav-link {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-link:hover {
+  align-items: start;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.4s;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.contact {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1.7rem;
+  border-radius: 10rem;
+  font-family: Inter;
+  font-size: 1.5rem;
+  border: 1px solid #000;
+}
+
+.contact:hover {
+  background-color: #000;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}

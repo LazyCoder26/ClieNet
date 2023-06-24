@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* change background color */
+body {
+  background-color: #f6f6f6;
+}
+
+.App{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: auto;
+}

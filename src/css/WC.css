@@ -1,0 +1,153 @@
+.projects {
+  width: 100%;
+  margin: 4rem 0rem;
+}
+
+.work-1 {
+  display: flex;
+  width: 85%;
+  height: 580px;
+  overflow: hidden;
+  border-radius: 50px;
+  background: #fff;
+}
+
+.w1-img {
+  width: fit-content;
+  height: 100%;
+}
+
+.w1-img img {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://heartbeat.ua/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Falka.1fb83c86.webp&w=1920&q=75");
+}
+
+.w1-data {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 40px;
+  font-family: Inter;
+}
+
+.w1-details div:nth-child(1) {
+  font-size: 3rem;
+  font-family: Inter;
+}
+
+.w1-details div:nth-child(2) {
+  font-size: 1rem;
+  font-family: Inter;
+  padding: 1rem 0rem;
+}
+
+.w1-details div:nth-child(3) {
+  padding-bottom: 1.5rem;
+  font-family: Inter;
+  padding: 1.5rem 0rem;
+}
+
+.w1-details div:nth-child(4) {
+  padding-bottom: 10px;
+  font-family: Inter;
+  padding: 1rem 0rem;
+  font-family: Inter;
+}
+
+.pills {
+  width: fit-content;
+  gap: 10px;
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
+  font-family: Inter;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.pills div {
+  display: flex;
+  width: fit-content;
+  height: 2rem;
+  border: 1px solid #c9c9c9;
+  border-radius: 20px;
+  padding: 0px 10px;
+  flex: 1;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.emoji {
+  display: flex;
+  flex-direction: row;
+  min-width: 85px;
+}
+
+.emoji {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.flag {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.view-link {
+  cursor: pointer;
+  position: relative;
+}
+
+.view-link:hover {
+  align-items: start;
+}
+
+.view-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.4s;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+}
+
+.view-link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  cursor: none;
+}
+
+.custom-cursor::before {
+  content: "View Case";
+  font-family: Inter;
+  color: #fff;
+  font-size: 1.5rem;
+}
