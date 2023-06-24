@@ -151,3 +151,15 @@
   color: #fff;
   font-size: 1.5rem;
 }
+
+.proj > :nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.proj > :nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}

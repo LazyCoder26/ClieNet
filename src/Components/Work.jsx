@@ -3,6 +3,57 @@ import "../css/Work.css";
 import Workcomp from "./WC";
 import gsap from "gsap";
 
+const projects = [
+  {
+    projTitle: "Project Title",
+    loc: "Location",
+    imageUrl:
+      "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    projectLink: "#",
+    emoji: "👨‍💻",
+    tags: ["React", "Node", "MongoDB"],
+    empSize: "10-50",
+    flag: "🇮🇳",
+  },
+  {
+    projTitle: "Project Title",
+    loc: "Location",
+    imageUrl:
+      "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    projectLink: "#",
+    emoji: "👨‍💻",
+    tags: ["React", "Node", "MongoDB"],
+    empSize: "10-50",
+    flag: "🇮🇳",
+  },
+  {
+    projTitle: "Project Title",
+    loc: "Location",
+    imageUrl:
+      "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    projectLink: "#",
+    emoji: "👨‍💻",
+    tags: ["React", "Node", "MongoDB"],
+    empSize: "10-50",
+    flag: "🇮🇳",
+  },
+  {
+    projTitle: "Project Title",
+    loc: "Location",
+    imageUrl:
+      "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    projectLink: "#",
+    emoji: "👨‍💻",
+    tags: ["React", "Node", "MongoDB"],
+    empSize: "10-50",
+    flag: "🇮🇳",
+  },
+];
+
 const Work = () => {
   const cursorRef = useRef(null);
 
@@ -29,22 +80,26 @@ const Work = () => {
     const updateCursor = (e) => {
       gsap.to(customCursor, {
         duration: 0.5,
-        x: e.clientX - 75,
-        y: e.clientY - 75,
+        x: e.clientX - 100,
+        y: e.clientY - 100,
         ease: "expo.out",
       });
     };
 
-    const imgElement = document.querySelector(".w1-img img");
+    const projElements = document.querySelectorAll(".proj > div");
 
-    imgElement.addEventListener("mouseenter", showCursor);
-    imgElement.addEventListener("mouseleave", hideCursor);
+    projElements.forEach((element) => {
+      element.addEventListener("mouseenter", showCursor);
+      element.addEventListener("mouseleave", hideCursor);
+    });
 
     document.addEventListener("mousemove", updateCursor);
 
     return () => {
-      imgElement.removeEventListener("mouseenter", showCursor);
-      imgElement.removeEventListener("mouseleave", hideCursor);
+      projElements.forEach((element) => {
+        element.removeEventListener("mouseenter", showCursor);
+        element.removeEventListener("mouseleave", hideCursor);
+      });
       document.removeEventListener("mousemove", updateCursor);
     };
   }, []);
@@ -54,17 +109,11 @@ const Work = () => {
       <div className="Work">
         <p className="Work-title">Our Latest Work</p>
       </div>
-      <Workcomp
-        projTitle="Project Title"
-        loc="Location"
-        imageUrl="https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-        projectLink="#"
-        emoji="👨‍💻"
-        tags={["React", "Node", "MongoDB"]}
-        empSize="10-50"
-        flag="🇮🇳"
-      />
+      <div className="proj">
+        {projects.map((project, index) => (
+          <Workcomp key={index} {...project} />
+        ))}
+      </div>
       <div className="custom-cursor" ref={cursorRef} />
     </div>
   );

@@ -8,7 +8,7 @@ const WorkComp = (props) => {
     <div className="projects">
         <div className="work-1">
           <div className="w1-img">
-            <img src={imageUrl} alt="" />
+            <img src={imageUrl} alt=""/>
           </div>
           <div className="w1-data">
             <div className="w1-details">
