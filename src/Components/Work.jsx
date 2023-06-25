@@ -9,7 +9,8 @@ const projects = [
     loc: "Location",
     imageUrl:
       "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     projectLink: "#",
     emoji: "🧑",
     tags: ["React", "Node", "MongoDB"],
@@ -21,10 +22,11 @@ const projects = [
     loc: "Location",
     imageUrl:
       "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     projectLink: "#",
     emoji: "🧑",
-    tags: ["DeFi","Web3","UI/UX"],
+    tags: ["DeFi", "Web3", "UI/UX"],
     empSize: "10-50",
     flag: "🇮🇳",
   },
@@ -33,7 +35,8 @@ const projects = [
     loc: "Location",
     imageUrl:
       "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     projectLink: "#",
     emoji: "👨",
     tags: ["React", "Node", "MongoDB"],
@@ -45,7 +48,8 @@ const projects = [
     loc: "Location",
     imageUrl:
       "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     projectLink: "#",
     emoji: "👨",
     tags: ["React", "Node", "MongoDB"],
@@ -63,28 +67,32 @@ const Work = () => {
     const showCursor = (e) => {
       const customCursor = cursorRef.current;
       const image = e.target.closest(".w1-img");
-    
+
       if (image) {
         gsap.to(customCursor, { duration: 0.2, opacity: 1, scale: 1 });
         document.body.style.cursor = "none";
       }
     };
-    
+
     const hideCursor = (e) => {
       const customCursor = cursorRef.current;
       const image = e.target.closest(".w1-img");
-    
+
       if (image) {
         // Check if the mouse is still over the image
-        const isStillOverImage = e.clientX >= image.offsetLeft && e.clientX <= image.offsetLeft + image.offsetWidth && e.clientY >= image.offsetTop && e.clientY <= image.offsetTop + image.offsetHeight;
-    
+        const isStillOverImage =
+          e.clientX >= image.offsetLeft &&
+          e.clientX <= image.offsetLeft + image.offsetWidth &&
+          e.clientY >= image.offsetTop &&
+          e.clientY <= image.offsetTop + image.offsetHeight;
+
         if (!isStillOverImage) {
           gsap.to(customCursor, { duration: 0.2, opacity: 0, scale: 0 });
           gsap.to(customCursor, {
-            duration: 0.1,
+            duration: 0.2,
             scale: 0,
             ease: "expo.in",
-            onComplete: document
+            onComplete: document,
           });
           document.body.style.cursor = "auto";
         }
