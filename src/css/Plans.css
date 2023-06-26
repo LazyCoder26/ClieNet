@@ -1,79 +1,82 @@
-/* :root {
-    --bg-color: #fff;
-    --text-color: #666;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --border-radius: 30px;
-    --font-size-lg: 1.5rem;
-    --font-size-md: 1.2rem;
-    --font-size-sm: 1rem;
-    --spacing-lg: 20px;
-    --spacing-md: 10px;
-    --spacing-sm: 5px;
-  }
-  
-  .Plans {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-lg);
-    padding: var(--spacing-lg);
-  }
-  
-  .Plans-card {
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
-    width: 300px;
-  }
-  
-  .Plan-title {
-    font-size: var(--font-size-lg);
-    font-weight: bold;
-    margin: 0 0 var(--spacing-md);
-  }
-  
-  .Plan-price {
-    font-size: var(--font-size-lg);
-    font-weight: bold;
-    margin: 0 0 var(--spacing-lg);
-  }
-  
-  .Plan-details ul {
-    padding: var(--spacing-lg);
-  }
-  
-  .Plan-details li {
-    list-style-type: disc;
-    margin: 0 0 var(--spacing-sm);
-    text-indent: -2px;
-  }
-  
-  .Plan-pills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-sm);
-  }
-  
-  .Plan-pills div {
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    color: var(--text-color);
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .Plan-pills div:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-  } */
-
 .Plans {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-family: Inter;
+  margin: 1rem;
+}
+
+
+.Plans-card {
+  max-width: 400px;
+  height: auto;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+.Plans-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.Plans-data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.Plans-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.Plans-price {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.Plans-details li{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  padding: 10px 0px;
+}
+
+@-moz-document url-prefix(){
+  .Plans-details div{
+    margin: 1rem;
+  }
+}
+
+.pill-data {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0rem;
+}
+
+.Plan-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.PlanPill {
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #c9c9c9;
+  border-radius: 9999px;
 }
