@@ -33,7 +33,7 @@ const WorkComp = (props) => {
             </div>
             <div>
               <span className="view-link">
-                <Link to={projectLink}>View Project</Link>
+                <Link to={projectLink} style={{ color: 'black' }}>View Project</Link>
               </span>
             </div>
           </div>

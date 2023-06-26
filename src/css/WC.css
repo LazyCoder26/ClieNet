@@ -104,6 +104,8 @@
 .view-link {
   cursor: pointer;
   position: relative;
+  text-decoration: none;
+  color: #000;
 }
 
 .view-link:hover {

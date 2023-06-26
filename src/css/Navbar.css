@@ -36,6 +36,8 @@
 .nav-link {
   cursor: pointer;
   position: relative;
+  /* remove bullet points */
+  list-style: none;
 }
 
 .nav-link:hover {

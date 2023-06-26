@@ -7,6 +7,7 @@ import "./css/Navbar.css";
 import "./css/index.css";
 import "./css/Status.css";
 import Work from "./Components/Work";
+import Plans from "./Components/Plans";
 
 const App = (props) => {
   return (
@@ -15,6 +16,7 @@ const App = (props) => {
       <div className="container">
         <Navbar />
         <Story />
+        <Plans />
         <Work />
       </div>
     </div>
