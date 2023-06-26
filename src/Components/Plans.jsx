@@ -38,7 +38,7 @@ const Plans = () => {
       features: [],
       tags: ["Tag 9", "Tag 10"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      img: "https://media.giphy.com/media/hSQODRJ5gJhHTu4CWq/giphy.gif",
+      img: "https://media.tenor.com/lGntiCxkcq0AAAAM/babu-rao.gif",
     },
   ];
 
@@ -51,7 +51,7 @@ const Plans = () => {
             <p className="Plans-price">{plan.price}</p>
             <div className="Plans-img">
               {plan.title === "Custom" && plan.img && (
-                <img style={{width: "150px", height: "150px", borderRadius: "20px"}} src={plan.img}/>
+                <img style={{width: "300px", height: "150px", borderRadius: "20px"}} src={plan.img}/>
               )}
             </div>
             <p className="Plans-details">
