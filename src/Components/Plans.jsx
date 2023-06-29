@@ -10,6 +10,7 @@ const Plans = () => {
       features: ["HTML", "CSS", "JS"],
       tags: ["Tag 1", "Tag 2"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      img:""
     },
     {
       title: "Pro",
@@ -17,6 +18,7 @@ const Plans = () => {
       features: ["HTML", "CSS", "JS", "Node"],
       tags: ["Tag 3", "Tag 4"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      img: "",
     },
     {
       title: "Plus",
@@ -24,6 +26,7 @@ const Plans = () => {
       features: ["React", "Tailwind/Bootstrap", "Node", "MongoDB"],
       tags: ["Tag 5", "Tag 6"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      img: "",
     },
     {
       title: "Enterprise",
@@ -31,6 +34,7 @@ const Plans = () => {
       features: ["React", "Node", "MongoDB", "Express", "Tailwind/Bootstrap"],
       tags: ["Tag 7", "Tag 8"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      img: "",
     },
     {
       title: "Custom",
@@ -51,6 +55,9 @@ const Plans = () => {
             <p className="Plans-price">{plan.price}</p>
             <div className="Plans-img">
               {plan.title === "Custom" && plan.img && (
+                <img style={{width: "300px", height: "150px", borderRadius: "20px"}} src={plan.img}/>
+              )}
+              {plan.title === "Basic" && plan.img && (
                 <img style={{width: "300px", height: "150px", borderRadius: "20px"}} src={plan.img}/>
               )}
             </div>

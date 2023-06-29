@@ -10,6 +10,7 @@ import Work from "./Components/Work";
 import Plans from "./Components/Plans";
 import Marquee from "react-fast-marquee";
 
+
 const App = (props) => {
   return (
     <div className="App">
@@ -17,8 +18,13 @@ const App = (props) => {
       <div className="container">
         <Navbar />
         <Story />
-        <Marquee autoFill={true} pauseOnHover={true} gradient={true} gradientColor={[246,246,246]}>
-          <Plans />
+        <Marquee
+          autoFill={true}
+          pauseOnHover={true}
+          gradient={true}
+          gradientColor={[246, 246, 246]}
+        >
+        <Plans />
         </Marquee>
         <Work />
       </div>

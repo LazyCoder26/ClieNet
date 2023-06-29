@@ -66,8 +66,7 @@
   overflow-y: hidden;
   font-family: Inter;
   font-size: 1rem;
-  text-align: center;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .pills div {
@@ -79,7 +78,7 @@
   padding: 0px 10px;
   flex: 1;
   justify-content: center;
-  padding-top: 2px;
+  align-items: center;
 }
 
 .emoji {
@@ -97,8 +96,9 @@
 .flag {
   display: flex;
   justify-content: center;
-  align-self: center;
-  min-width: 40px;
+  align-items: center;
+  min-width: 45px;
+  font-family: "Twemoji Country Flags";
 }
 
 .view-link {
@@ -135,24 +135,31 @@
   left: 0;
   width: 200px;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 10;
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transform-origin: center;
   cursor: none;
+  transform: scale(1);
+  transition: all;
 }
 
 .custom-cursor::before {
   content: "View Case";
   font-family: Inter;
-  color: #fff;
+  color: #fff !important;
   font-size: 1.5rem;
+}
+
+.custom-cursor::after {
+  transform: scale(0);
+  transition: all;
 }
 
 .proj > :nth-child(even) {

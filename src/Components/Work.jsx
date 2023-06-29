@@ -15,7 +15,7 @@ const projects = [
     emoji: "🧑",
     tags: ["React", "Node", "MongoDB"],
     empSize: "10-50",
-    flag: "🇮🇳",
+    flag: "🇺🇸",
   },
   {
     projTitle: "Project Title",

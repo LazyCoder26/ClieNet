@@ -11,12 +11,14 @@
     "golive": "lt --port 4000"
   },
   "dependencies": {
+    "country-flag-emoji-polyfill": "^0.1.4",
     "gsap": "^3.12.1",
     "localtunnel": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.0",
-    "react-router-dom": "^6.13.0"
+    "react-router-dom": "^6.13.0",
+    "svg-country-flags": "^1.2.10"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
