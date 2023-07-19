@@ -3,3 +3,31 @@
   font-size: 2.5rem;
   margin: 2rem 0rem;
 }
+
+.allwbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0rem;
+}
+
+.w-btn{
+  display: flex;
+  border: 1px solid #000000;
+  border-radius: 5rem;
+  padding: 2rem 2.5rem;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 400;
+  background: #ffffff;
+}
+
+.w-btn:hover{
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+}
+

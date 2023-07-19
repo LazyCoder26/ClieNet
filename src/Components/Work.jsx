@@ -56,6 +56,19 @@ const projects = [
     empSize: "10-50",
     flag: "🇮🇳",
   },
+  {
+    projTitle: "Project Title",
+    loc: "Location",
+    imageUrl:
+      "https://images.pexels.com/photos/2887781/pexels-photo-2887781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    projectLink: "#",
+    emoji: "👨",
+    tags: ["React", "Node", "MongoDB"],
+    empSize: "10-50",
+    flag: "🇮🇳",
+  }
 ];
 
 const Work = () => {
@@ -137,6 +150,11 @@ const Work = () => {
         ))}
       </div>
       <div className="custom-cursor" ref={cursorRef} />
+      <div className="allwbtn">
+        <div className="w-btn">
+          <p>all work</p>
+        </div>
+      </div>
     </div>
   );
 };
