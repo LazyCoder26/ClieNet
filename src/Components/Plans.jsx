@@ -42,7 +42,7 @@ const Plans = () => {
       features: [],
       tags: ["Tag 9", "Tag 10"],
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      img: "https://media.tenor.com/lGntiCxkcq0AAAAM/babu-rao.gif",
+      img: "https://s01.sgp1.digitaloceanspaces.com/large/880445-aazxyprclb-1527422690.jpeg",
     },
   ];
 
