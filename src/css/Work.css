@@ -16,7 +16,7 @@
   border: 1px solid #000000;
   border-radius: 5rem;
   padding: 2rem 2.5rem;
-  width: 70%;
+  width: 75%;
   align-items: center;
   justify-content: center;
   font-family: Inter;
@@ -30,4 +30,3 @@
   color: #ffffff;
   transition: 0.5s;
 }
-

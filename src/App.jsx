@@ -6,9 +6,14 @@ import "./css/App.css";
 import "./css/Navbar.css";
 import "./css/index.css";
 import "./css/Status.css";
+import "./css/Story.css";
+import "./css/Work.css";
+import "./css/Plans.css";
+import "./css/Misc.css";
 import Work from "./Components/Work";
 import Plans from "./Components/Plans";
 import Marquee from "react-fast-marquee";
+import Misc from "./Components/Misc";
 
 
 const App = (props) => {
@@ -27,6 +32,7 @@ const App = (props) => {
         <Plans />
         </Marquee>
         <Work />
+        <Misc />
       </div>
     </div>
   );

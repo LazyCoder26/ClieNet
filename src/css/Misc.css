@@ -1,0 +1,119 @@
+:root {
+    --title-font-size: 2.3rem;
+    --vertical-gap: 0 0 1rem 0;
+    --info-font-size: 1rem;
+    --main-width: 75%;
+    --img-width: 80px;
+    --small-img-width: 70px;
+    --info-gap: 10px;
+    --section-gap: 30px;
+    --info-line-height: 1.7rem;
+  }
+  
+  .misc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: var(--main-width);
+    font-family: Inter;
+    gap: 50px;
+  }
+  
+  .us-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: var(--main-width);
+    gap: var(--section-gap);
+  }
+  
+  .us-1 img {
+    width: var(--img-width);
+  }
+  
+  .one-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--info-gap);
+  }
+  
+  .us-1-title {
+    font-size: var(--title-font-size);
+    padding: var(--vertical-gap);
+  }
+  
+  .us-1-info {
+    font-size: var(--info-font-size);
+    line-height: var(--info-line-height);
+  }
+  
+  .us-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: var(--main-width);
+    gap: var(--section-gap);
+  }
+  
+  .us-2 img {
+    width: var(--img-width);
+  }
+  
+  .two-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--info-gap);
+  }
+  
+  .us-2-title {
+    font-size: var(--title-font-size);
+    padding: var(--vertical-gap);
+  }
+  
+  .us-2-info {
+    font-size: var(--info-font-size);
+    line-height: var(--info-line-height);
+  }
+  
+  .us-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: var(--main-width);
+    gap: var(--section-gap);
+  }
+  
+  .us-3 img {
+    width: var(--small-img-width);
+  }
+  
+  .three-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--info-gap);
+  }
+  
+  .us-3-title {
+    font-size: var(--title-font-size);
+    padding: var(--vertical-gap);
+  }
+  
+  .us-3-info {
+    font-size: var(--info-font-size);
+    line-height: var(--info-line-height);
+  }
